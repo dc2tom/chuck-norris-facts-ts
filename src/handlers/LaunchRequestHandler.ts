@@ -12,10 +12,10 @@ export class LaunchRequestHandler implements RequestHandler {
         const facts: string = fs.readFileSync('src/resources/chuck-facts.txt', 'utf-8');
         const factArray: string[] = facts.split('\n');
         const responseBuilder: ResponseBuilder = handlerInput.responseBuilder;
-        const speechString: string = factArray[LaunchRequestHandler.randomIntFromInterval(0,97)];
+        const speechString: string = factArray[LaunchRequestHandler.randomIntFromInterval(0,85)];
 
         return responseBuilder.speak(speechString)
-            .withSimpleCard("Random Chuck Norris Fact", speechString)
+            .withSimpleCard("Random Chuck Norris (Unofficial) Fact", speechString)
             .withShouldEndSession(true)
             .getResponse();
     }

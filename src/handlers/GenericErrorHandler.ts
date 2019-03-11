@@ -14,7 +14,7 @@ export class GenericErrorHandler implements ErrorHandler {
 
         return handlerInput.responseBuilder
             .speak('Something went wrong. ' + error.message)
-            .withSimpleCard('Chuck Norris Facts', error.message)
+            .withSimpleCard('Chuck Norris (Unofficial) Facts', error.message)
             .withShouldEndSession(true)
             .getResponse();
     }   
